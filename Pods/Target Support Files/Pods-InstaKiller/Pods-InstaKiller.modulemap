@@ -1,0 +1,6 @@
+framework module Pods_InstaKiller {
+  umbrella header "Pods-InstaKiller-umbrella.h"
+
+  export *
+  module * { export * }
+}

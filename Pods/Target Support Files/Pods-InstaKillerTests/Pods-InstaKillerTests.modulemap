@@ -1,0 +1,6 @@
+framework module Pods_InstaKillerTests {
+  umbrella header "Pods-InstaKillerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

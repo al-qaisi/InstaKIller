@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2833259EF09224019A7CE03F /* Pods_InstaKiller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E51A1B6F3D319616A9ACE4 /* Pods_InstaKiller.framework */; };
+		97E001A5EDFE9E8669457693 /* Pods_InstaKillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE83657F73F9111E7B823FF /* Pods_InstaKillerTests.framework */; };
 		CED2BDB224112DB900C37170 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDB124112DB900C37170 /* AppDelegate.m */; };
 		CED2BDB524112DB900C37170 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDB424112DB900C37170 /* SceneDelegate.m */; };
 		CED2BDB824112DB900C37170 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDB724112DB900C37170 /* ViewController.m */; };
@@ -16,6 +18,7 @@
 		CED2BDC324112DBD00C37170 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDC224112DBD00C37170 /* main.m */; };
 		CED2BDCD24112DBD00C37170 /* InstaKillerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDCC24112DBD00C37170 /* InstaKillerTests.m */; };
 		CED2BDD824112DBD00C37170 /* InstaKillerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDD724112DBD00C37170 /* InstaKillerUITests.m */; };
+		D5F7C1A3BF393A1008F22BE0 /* Pods_InstaKiller_InstaKillerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD40532062092C095A10C5EC /* Pods_InstaKiller_InstaKillerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32BF7B26A601254BF33EE17C /* Pods-InstaKiller-InstaKillerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKiller-InstaKillerUITests.debug.xcconfig"; path = "Target Support Files/Pods-InstaKiller-InstaKillerUITests/Pods-InstaKiller-InstaKillerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		394AC6EB7CDB3B2CFB9AC25F /* Pods-InstaKiller-InstaKillerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKiller-InstaKillerUITests.release.xcconfig"; path = "Target Support Files/Pods-InstaKiller-InstaKillerUITests/Pods-InstaKiller-InstaKillerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4EE83657F73F9111E7B823FF /* Pods_InstaKillerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaKillerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8069CCEFDA80B8AA8C6C7E45 /* Pods-InstaKiller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKiller.release.xcconfig"; path = "Target Support Files/Pods-InstaKiller/Pods-InstaKiller.release.xcconfig"; sourceTree = "<group>"; };
+		8CA1EDA3DA89D3F8D6CBDA0F /* Pods-InstaKiller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKiller.debug.xcconfig"; path = "Target Support Files/Pods-InstaKiller/Pods-InstaKiller.debug.xcconfig"; sourceTree = "<group>"; };
+		9B5FA3686632B942B625D50D /* Pods-InstaKillerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKillerTests.release.xcconfig"; path = "Target Support Files/Pods-InstaKillerTests/Pods-InstaKillerTests.release.xcconfig"; sourceTree = "<group>"; };
 		CED2BDAD24112DB900C37170 /* InstaKiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaKiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED2BDB024112DB900C37170 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CED2BDB124112DB900C37170 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +63,9 @@
 		CED2BDD324112DBD00C37170 /* InstaKillerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaKillerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED2BDD724112DBD00C37170 /* InstaKillerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaKillerUITests.m; sourceTree = "<group>"; };
 		CED2BDD924112DBD00C37170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E51A1B6F3D319616A9ACE4 /* Pods_InstaKiller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaKiller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70DA580BE794E1E0A5556D0 /* Pods-InstaKillerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKillerTests.debug.xcconfig"; path = "Target Support Files/Pods-InstaKillerTests/Pods-InstaKillerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FD40532062092C095A10C5EC /* Pods_InstaKiller_InstaKillerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaKiller_InstaKillerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2833259EF09224019A7CE03F /* Pods_InstaKiller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97E001A5EDFE9E8669457693 /* Pods_InstaKillerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,12 +89,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F7C1A3BF393A1008F22BE0 /* Pods_InstaKiller_InstaKillerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2455DF9128B11FD393E020A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E1E51A1B6F3D319616A9ACE4 /* Pods_InstaKiller.framework */,
+				FD40532062092C095A10C5EC /* Pods_InstaKiller_InstaKillerUITests.framework */,
+				4EE83657F73F9111E7B823FF /* Pods_InstaKillerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2A3CA31C90112B0D0A26948D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CA1EDA3DA89D3F8D6CBDA0F /* Pods-InstaKiller.debug.xcconfig */,
+				8069CCEFDA80B8AA8C6C7E45 /* Pods-InstaKiller.release.xcconfig */,
+				32BF7B26A601254BF33EE17C /* Pods-InstaKiller-InstaKillerUITests.debug.xcconfig */,
+				394AC6EB7CDB3B2CFB9AC25F /* Pods-InstaKiller-InstaKillerUITests.release.xcconfig */,
+				E70DA580BE794E1E0A5556D0 /* Pods-InstaKillerTests.debug.xcconfig */,
+				9B5FA3686632B942B625D50D /* Pods-InstaKillerTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CED2BDA424112DB900C37170 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +127,8 @@
 				CED2BDCB24112DBD00C37170 /* InstaKillerTests */,
 				CED2BDD624112DBD00C37170 /* InstaKillerUITests */,
 				CED2BDAE24112DB900C37170 /* Products */,
+				2A3CA31C90112B0D0A26948D /* Pods */,
+				2455DF9128B11FD393E020A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED2BDDC24112DBD00C37170 /* Build configuration list for PBXNativeTarget "InstaKiller" */;
 			buildPhases = (
+				F4BE0A3DA8214C057DE3BADA /* [CP] Check Pods Manifest.lock */,
 				CED2BDA924112DB900C37170 /* Sources */,
 				CED2BDAA24112DB900C37170 /* Frameworks */,
 				CED2BDAB24112DB900C37170 /* Resources */,
+				431D3017407076BF5147990E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED2BDDF24112DBD00C37170 /* Build configuration list for PBXNativeTarget "InstaKillerTests" */;
 			buildPhases = (
+				E9FBBDEFB04A19AB58CE2807 /* [CP] Check Pods Manifest.lock */,
 				CED2BDC424112DBD00C37170 /* Sources */,
 				CED2BDC524112DBD00C37170 /* Frameworks */,
 				CED2BDC624112DBD00C37170 /* Resources */,
@@ -179,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED2BDE224112DBD00C37170 /* Build configuration list for PBXNativeTarget "InstaKillerUITests" */;
 			buildPhases = (
+				81FBD4D8DB9ADBDECE744BC6 /* [CP] Check Pods Manifest.lock */,
 				CED2BDCF24112DBD00C37170 /* Sources */,
 				CED2BDD024112DBD00C37170 /* Frameworks */,
 				CED2BDD124112DBD00C37170 /* Resources */,
+				797BAA3F63930E2569149656 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,6 +307,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		431D3017407076BF5147990E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaKiller/Pods-InstaKiller-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaKiller/Pods-InstaKiller-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaKiller/Pods-InstaKiller-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		797BAA3F63930E2569149656 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaKiller-InstaKillerUITests/Pods-InstaKiller-InstaKillerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-InstaKiller-InstaKillerUITests/Pods-InstaKiller-InstaKillerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-InstaKiller-InstaKillerUITests/Pods-InstaKiller-InstaKillerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81FBD4D8DB9ADBDECE744BC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaKiller-InstaKillerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9FBBDEFB04A19AB58CE2807 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaKillerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4BE0A3DA8214C057DE3BADA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaKiller-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CED2BDA924112DB900C37170 /* Sources */ = {
@@ -437,6 +586,7 @@
 		};
 		CED2BDDD24112DBD00C37170 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CA1EDA3DA89D3F8D6CBDA0F /* Pods-InstaKiller.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -454,6 +604,7 @@
 		};
 		CED2BDDE24112DBD00C37170 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8069CCEFDA80B8AA8C6C7E45 /* Pods-InstaKiller.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +622,7 @@
 		};
 		CED2BDE024112DBD00C37170 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E70DA580BE794E1E0A5556D0 /* Pods-InstaKillerTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +643,7 @@
 		};
 		CED2BDE124112DBD00C37170 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B5FA3686632B942B625D50D /* Pods-InstaKillerTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -511,6 +664,7 @@
 		};
 		CED2BDE324112DBD00C37170 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32BF7B26A601254BF33EE17C /* Pods-InstaKiller-InstaKillerUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQMWRY4M3B;
@@ -529,6 +683,7 @@
 		};
 		CED2BDE424112DBD00C37170 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 394AC6EB7CDB3B2CFB9AC25F /* Pods-InstaKiller-InstaKillerUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQMWRY4M3B;
