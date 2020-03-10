@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <VKSdk.h>
 
 @interface AppDelegate ()
 
@@ -15,8 +16,12 @@
 @implementation AppDelegate
 
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    
     return YES;
 }
 
@@ -37,5 +42,9 @@
     // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options {
+    [VKSdk processOpenURL:url fromApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]];
+    return YES;
+}
 
 @end
