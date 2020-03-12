@@ -25,7 +25,7 @@
 			<string>temp.InstaKiller</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>vk7348715</string>
+				<string>vk7355363</string>
 			</array>
 		</dict>
 	</array>
@@ -73,11 +73,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>LSApplicationQueriesSchemes</key>
-    <array>
-        <string>vk</string>
-        <string>vk-share</string>
-        <string>vkauthorize</string>
-    </array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>vk</string>
+		<string>vk-share</string>
+		<string>vkauthorize</string>
+	</array>
 </dict>
 </plist>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -116,7 +116,6 @@
 				E70DA580BE794E1E0A5556D0 /* Pods-InstaKillerTests.debug.xcconfig */,
 				9B5FA3686632B942B625D50D /* Pods-InstaKillerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -596,7 +595,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = temp.InstaKiller;
+				PRODUCT_BUNDLE_IDENTIFIER = com.temp.InstaKiller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -614,7 +613,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = temp.InstaKiller;
+				PRODUCT_BUNDLE_IDENTIFIER = com.temp.InstaKiller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

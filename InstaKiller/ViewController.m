@@ -29,9 +29,10 @@
     self.password = @"secret";
     
     self.passwordTextField.secureTextEntry = YES;
-    
- 
-    VKSdk *sdkInstance = [VKSdk initializeWithAppId:@"7348715"];
+}
+
+-(void) viewDidAppear:(BOOL)animated {
+    VKSdk *sdkInstance = [VKSdk initializeWithAppId:@"7355363"];
     [sdkInstance registerDelegate: self];
     [sdkInstance setUiDelegate: self];
     
@@ -47,7 +48,6 @@
             // Some error happend, but you may try later
         }
     }];
-    
 }
 
 - (IBAction)onPressLoginButton:(id)sender {
