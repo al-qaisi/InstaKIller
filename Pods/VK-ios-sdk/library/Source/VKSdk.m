@@ -132,6 +132,7 @@ static NSString *VK_ACCESS_TOKEN_DEFAULTS_KEY = @"VK_ACCESS_TOKEN_DEFAULTS_KEY_D
 #pragma mark Authorization
 
 + (void)authorize:(NSArray *)permissions {
+    NSLog(@"Here");
     [self authorize:permissions withOptions:VKAuthorizationOptionsUnlimitedToken];
 }
 
@@ -169,7 +170,8 @@ static NSString *VK_ACCESS_TOKEN_DEFAULTS_KEY = @"VK_ACCESS_TOKEN_DEFAULTS_KEY_D
                                           scope:permissions
                                          revoke:YES];
     NSURL *urlToOpen = [VKAuthorizeController buildAuthorizationURLWithContext:authContext];
-
+    NSLog(@"url: %@", urlToOpen.absoluteString);
+    vkApp = FALSE;
     if (vkApp) {
         
         UIApplication *application = [UIApplication sharedApplication];

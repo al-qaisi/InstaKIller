@@ -30,8 +30,10 @@
     
     self.passwordTextField.secureTextEntry = YES;
     
+ 
     VKSdk *sdkInstance = [VKSdk initializeWithAppId:@"7348715"];
     [sdkInstance registerDelegate: self];
+    [sdkInstance setUiDelegate: self];
     
     NSArray *SCOPE = @[@"photos"];
     
@@ -47,6 +49,7 @@
     }];
     
 }
+
 - (IBAction)onPressLoginButton:(id)sender {
     if ([self.username isEqualToString: [self.usernameTextField text]])
     {
@@ -79,7 +82,8 @@
 
 
 - (void)vkSdkShouldPresentViewController:(UIViewController *)controller {
-    
+    NSLog(@"In View Controller");
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 
