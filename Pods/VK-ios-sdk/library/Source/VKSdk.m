@@ -132,7 +132,6 @@ static NSString *VK_ACCESS_TOKEN_DEFAULTS_KEY = @"VK_ACCESS_TOKEN_DEFAULTS_KEY_D
 #pragma mark Authorization
 
 + (void)authorize:(NSArray *)permissions {
-    NSLog(@"Here");
     [self authorize:permissions withOptions:VKAuthorizationOptionsUnlimitedToken];
 }
 
@@ -157,11 +156,13 @@ static NSString *VK_ACCESS_TOKEN_DEFAULTS_KEY = @"VK_ACCESS_TOKEN_DEFAULTS_KEY_D
     instance.permissions = [permissionsSet copy];
     permissions = [permissionsSet allObjects];
 
-    BOOL vkApp = [self vkAppMayExists]
-            && instance.authState == VKAuthorizationInitialized;
+    BOOL vkApp = NO;
+    //[self vkAppMayExists]
+      //      && instance.authState == VKAuthorizationInitialized;
 
     BOOL safariEnabled = !(options & VKAuthorizationOptionsDisableSafariController);
-
+    safariEnabled = NO;
+    NSLog(safariEnabled ? @"safari enabled" : @"safari disabled");
     NSString *clientId = instance.currentAppId;
     VKAuthorizationContext *authContext =
     [VKAuthorizationContext contextWithAuthType:vkApp ? VKAuthorizationTypeApp : VKAuthorizationTypeSafari
@@ -171,7 +172,6 @@ static NSString *VK_ACCESS_TOKEN_DEFAULTS_KEY = @"VK_ACCESS_TOKEN_DEFAULTS_KEY_D
                                          revoke:YES];
     NSURL *urlToOpen = [VKAuthorizeController buildAuthorizationURLWithContext:authContext];
     NSLog(@"url: %@", urlToOpen.absoluteString);
-    vkApp = FALSE;
     if (vkApp) {
         
         UIApplication *application = [UIApplication sharedApplication];
@@ -208,6 +208,7 @@ static NSString *VK_ACCESS_TOKEN_DEFAULTS_KEY = @"VK_ACCESS_TOKEN_DEFAULTS_KEY_D
     } else if (safariEnabled && [SFSafariViewController class] && instance.authState < VKAuthorizationSafariInApp) {
         SFSafariViewController *viewController = [[SFSafariViewController alloc] initWithURL:urlToOpen];
         viewController.delegate = instance;
+        NSLog(@"present safari controller");
         [viewController vks_presentViewControllerThroughDelegate];
         instance.presentedSafariViewController = viewController;
 

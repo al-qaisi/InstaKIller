@@ -22,10 +22,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>temp.InstaKiller</string>
+			<string>com.temp.InstaKiller</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>vk7355363</string>
+				<string>vk7355842</string>
 			</array>
 		</dict>
 	</array>
