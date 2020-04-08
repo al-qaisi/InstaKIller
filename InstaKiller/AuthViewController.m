@@ -18,30 +18,43 @@
 
 @implementation AuthViewController
 
-
--(id)initWithCoder:(NSCoder *)decoder {
+/**
+ * Method name: initWithCoder
+ * Description: instantiates iVars
+ * Params: decoder
+*/
+- (id)initWithCoder:(NSCoder *)decoder {
     self = [super initWithCoder:decoder];
     if(self) {
-        NSLog(@"initiated PHV");
         vkModel = [VKModel sharedInstance];
     }
     return self;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
 
+/**
+ * Method name: onPressLoginButton
+ * Description: fires when login button is clicked. initializes authorization process
+ * Params: sender
+*/
 - (IBAction)onPressLoginButton:(id)sender {
     [vkModel authenticateWithVKWithDelegate:self];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
 }
 
-
+/**
+ * Method name: vkSdkAccessAuthorizationFinishedWithResult
+ * Description: fires when authorization is succesfully finished. navigates to CommonViewController
+ * Params: result
+*/
 - (void)vkSdkAccessAuthorizationFinishedWithResult:(VKAuthorizationResult *)result {
     if (result.token) {
         NSLog(@"Authorization successful. Token: %@", result.token);
@@ -61,7 +74,6 @@
 
 
 - (void)vkSdkShouldPresentViewController:(UIViewController *)controller {
-    NSLog(@"In shouldPresent method");
     [self presentViewController:controller animated:YES completion:nil];
 }
 
@@ -69,6 +81,5 @@
 - (void)vkSdkNeedCaptchaEnter:(VKError *)captchaError {
     
 }
-
 
 @end

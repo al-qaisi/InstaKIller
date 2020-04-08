@@ -34,8 +34,7 @@
                                     <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </variation>
                                 <connections>
-                                    <action selector="onButtonTouch:" destination="Xqc-2g-rAv" eventType="touchUpInside" id="obg-jS-NIp"/>
-                                    <action selector="onShowPhotosTouch:" destination="Xqc-2g-rAv" eventType="touchUpInside" id="AfK-IH-n6U"/>
+                                    <action selector="onShowPhotosTouch:" destination="Xqc-2g-rAv" eventType="touchUpInside" id="Noq-6I-JEv"/>
                                 </connections>
                             </button>
                         </subviews>

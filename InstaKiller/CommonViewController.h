@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-
+/**
+ * Class name: CommonViewController
+ * Description: controller where is presented all functionality of the application
+ */
 @interface CommonViewController : UIViewController
 
 @end

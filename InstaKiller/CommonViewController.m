@@ -10,14 +10,17 @@
 #import "VKSdk.h"
 
 @implementation CommonViewController
+
+/**
+ * Method name: onPressLoginButton
+ * Description: fires when login button is clicked. initializes authorization process
+ * Params: sender
+*/
 - (IBAction)onShowPhotosTouch:(id)sender {
     UIViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PhotoCollectionViewController"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (IBAction)onButtonTouch:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

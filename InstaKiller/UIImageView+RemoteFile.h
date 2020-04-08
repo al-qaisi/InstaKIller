@@ -9,8 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
 
+/**
+ * Class name: ImageCache
+ * Description: caches downloaded images to reuse it.
+ */
 @interface ImageCache: NSObject
 
+/**
+ * Property name: cache
+ * Description: dictionary url - UIImage.
+ */
 @property (nonatomic, strong) NSMutableDictionary *cache;
 
 -(UIImage *) cachedImageForURL: (NSString *)url;
@@ -22,6 +30,11 @@
 
 @synthesize cache = _cache;
 
+/**
+ * Method name: init
+ * Description: overrides super init to subscribe to notofication center if lack of memory occures
+ * Parameters: none
+ */
 -(id) init
 {
     self = [super init];
@@ -36,14 +49,24 @@
     return self;
 }
 
--(void) dealloc
+/**
+ * Method name: dealloc
+ * Description: unsubscribe from notification center from notofication center
+ * Parameters: none
+ */
+- (void) dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self
     name:UIApplicationDidReceiveMemoryWarningNotification
                                                   object: nil];
 }
 
--(NSMutableDictionary *) cache
+/**
+ * Method name: cache
+ * Description: returns singletone cache
+ * Parameters: none
+ */
+- (NSMutableDictionary *) cache
 {
     NSLog(@"ds");
     if(_cache == nil) {
@@ -52,30 +75,37 @@
     return _cache;
 }
 
--(void) clearCache
+- (void) clearCache
 {
     [self.cache removeAllObjects];
 }
 
--(void) storeCachedImage:(UIImage *)image forURL:(NSString *)url
+- (void) storeCachedImage:(UIImage *)image forURL:(NSString *)url
 {
     self.cache[url] = image;
 }
 
--(UIImage *) cachedImageForURL:(NSString *) url;
+- (UIImage *) cachedImageForURL:(NSString *) url;
 {
     return self.cache[url];
 }
 
 @end
 
-
+/**
+ * Protocol name: DownloadHelperDelegate
+ * Description: delegate for downloadhelper messages
+ */
 @protocol DownloadHelperDelegate <NSObject>
 
--(void)didCompleteDownloadForURL:(NSString *)url withData:(NSMutableData *)data;
+- (void)didCompleteDownloadForURL:(NSString *)url withData:(NSMutableData *)data;
 
 @end
 
+/**
+ * Class name: DownloadHelper
+ * Description: instance of this class is delegate of NSURLConnection. fires UIImageVIew method when image downloaded
+ */
 @interface DownloadHelper : NSObject
 
 @property (nonatomic, strong) NSString *url;
@@ -112,7 +142,10 @@
 }
 @end
 
-
+/**
+ * Class name: UIImageView(RemoteFileHidden)
+ * Description: private extenstion of UIImageView to add url and downloadhelper properties and accessor methods for them
+ */
 @interface UIImageView(RemoteFileHidden) <DownloadHelperDelegate>
 
 @property (nonatomic, strong, setter = setUrl:) NSString* url;
@@ -122,13 +155,21 @@
 
 @implementation UIImageView(RemoteFileHidden)
 
+/**
+ * Property name: url, downloadHelper
+ * Description: cannot synthesize properties of UIImageView extention. so using runtime library
+ */
 @dynamic url;
 @dynamic downloadHelper;
 
+/**
+* Var name: kImageUrlObjectKey
+* Description: cannot synthesize properties of UIImageView extention. so using runtime library
+*/
 static char kImageUrlObjectKey;
 static char kImageDownloadHelperObjectKey;
 
-+(ImageCache *) imageCache {
++ (ImageCache *) imageCache {
     static ImageCache *_imageCache;
     
     if(_imageCache == nil) {
@@ -155,6 +196,7 @@ static char kImageDownloadHelperObjectKey;
         self.downloadHelper = helper;
         
     }
+    
         return helper;
 }
 
@@ -168,8 +210,12 @@ OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 #pragma mark DownloadHelperDelegate
--(void)didCompleteDownloadForURL:(NSString *)url withData:(NSMutableData *)data
-{
+/**
+* Method name: namedidCompleteDownloadForURL
+* Description: fires when URLConnection finishes downloading and sets image using imageCache
+* Parameters: url, data
+*/
+- (void)didCompleteDownloadForURL:(NSString *)url withData:(NSMutableData *)data {
     //handles the downloaded image data, turns it into an image instance and saves then it
     UIImage *image = [UIImage imageWithData:data];
     if (image == nil) {//something didn't work out - data may be corrupted or a bad url
@@ -184,7 +230,17 @@ OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 
 @end
 
+/**
+* Class name: UIImageView(RemoteFile)
+* Description: public extenstion of UIImageView
+*/
 @interface UIImageView (RemoteFile)
+
+/**
+ * Method name: namesetImageWithRemoteFileURL
+ * Description: sets image of Cell with url and placeholder image: tries to get image from ImageCache, initializes downloadHelper and fires connection
+ * Parameters: urlString, placeholderImage
+ */
 - (void)setImageWithRemoteFileURL:(NSString *) urlString placeholderImage: (UIImage *)placeholderImage;
 @end
 
@@ -198,7 +254,7 @@ OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         
     [self.downloadHelper cancelConnection];
     self.url = urlString;
-//get a reference to the image cache singleton
+    //get a reference to the image cache singleton
     ImageCache *imageCache = [UIImageView imageCache];
     UIImage *image = [imageCache cachedImageForURL:urlString]; //check it we've already got a cached version of the image
     if (image) {

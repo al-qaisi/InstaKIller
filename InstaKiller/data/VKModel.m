@@ -9,16 +9,16 @@
 #import "VKModel.h"
 #import <VKSdk.h>
 
-
 //TODO: add download placeholder photo to assets
 //TODO: add button on common view to show photos
 
 @implementation VKModel
 
 static int PHOTOS_COUNT = 200;
-
 static VKModel* _sharedInstance = nil;
-+(VKModel*) sharedInstance {
+
+
++ (VKModel*) sharedInstance {
     
     if(!_sharedInstance) {
         _sharedInstance = [[VKModel alloc] init];
@@ -27,7 +27,8 @@ static VKModel* _sharedInstance = nil;
     return _sharedInstance;
 }
 
--(void)authenticateWithVKWithDelegate: (id<VKSdkDelegate, VKSdkUIDelegate>)vkUIDelegate {
+
+- (void)authenticateWithVKWithDelegate: (id<VKSdkDelegate, VKSdkUIDelegate>)vkUIDelegate {
     _sdkInstance = [VKSdk initializeWithAppId:@"7355842"];
     [_sdkInstance registerDelegate: vkUIDelegate];
     [_sdkInstance setUiDelegate: vkUIDelegate];
@@ -48,11 +49,12 @@ static VKModel* _sharedInstance = nil;
 }
 
 //TODO: make method for getting userinfo
--(void)requestUserInfo {
+- (void)requestUserInfo {
         
 }
 
--(NSArray<VKPhoto*> *)requestPhotos {
+
+- (NSArray<VKPhoto*> *)requestPhotos {
     NSLog(@"trying to request photos...");
     VKRequest *getPhotosRequest = [VKRequest requestWithMethod:@"photos.get" andParameters:@{@"owner_id":@37845064, @"album_id":@"saved", @"count":[NSNumber numberWithInt:PHOTOS_COUNT]}
         modelClass: [VKPhotoArray class]];
@@ -71,8 +73,6 @@ static VKModel* _sharedInstance = nil;
         }
     }];
     
-    //NSRange range = NSMakeRange(0, PHOTOS_COUNT);
-    //NSLog(@"Array in vkmodel: %lu", [[photoArray.items subarrayWithRange:range] count]);
     return photoArray.items;
 }
 

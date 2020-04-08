@@ -12,7 +12,11 @@
 
 @interface PhotoCollectionViewCell : UICollectionViewCell
 
--(void)setImageWithURL: (VKPhoto*)vkPhoto;
+/**
+ * Method name: setImageWithURL
+ * Description: sets cell's ImageView image with url from vkPhoto
+ * Parameters: vkPhoto
+ */
+- (void)setImageWithURL: (VKPhoto*)vkPhoto;
 
 @end
- 

@@ -18,20 +18,24 @@
 
 @end
 
-
 @implementation PhotoCollectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 
--(id)initWithCoder:(NSCoder *)decoder {
+/**
+* Method name: initWithCoder
+* Description: initializes ivars
+* Parameters: decoder
+*/
+- (id)initWithCoder:(NSCoder *)decoder {
     self = [super initWithCoder:decoder];
     if(self) {
-        NSLog(@"initiated PHV");
         vkModel = [VKModel sharedInstance];
         photos = [vkModel requestPhotos];
     }
     return self;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -55,16 +59,17 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-     NSLog(@"count in rendering: @%lu", photos.count);
+    
     return photos.count;
 }
 
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-     
-    // Configure the cell
-    NSLog(@"count int populating col view %lu:", photos.count);
+    
     [cell setImageWithURL: photos[indexPath.row]];
+    
     return cell;
 }
 

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * Class name: AuthViewController
+ * Description: controller of startup view which initializes vk authorization
+ */
 @interface AuthViewController : UIViewController
 
-
 @end
-
