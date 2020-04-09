@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		2833259EF09224019A7CE03F /* Pods_InstaKiller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E51A1B6F3D319616A9ACE4 /* Pods_InstaKiller.framework */; };
 		97E001A5EDFE9E8669457693 /* Pods_InstaKillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE83657F73F9111E7B823FF /* Pods_InstaKillerTests.framework */; };
-		CE4DDFAB241F668D005548CF /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DDFAA241F668D005548CF /* CommonViewController.m */; };
 		CE4DDFB1241FB03A005548CF /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DDFB0241FB03A005548CF /* PhotoCollectionViewCell.m */; };
+		CE8A7A6D243F11800025535B /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8A7A6C243F11800025535B /* CommonViewController.m */; };
+		CE8A7A6F243F13430025535B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A7A6E243F13420025535B /* Main.storyboard */; };
+		CE8A7A71243F17530025535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A7A70243F17530025535B /* Assets.xcassets */; };
 		CED2BDB224112DB900C37170 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDB124112DB900C37170 /* AppDelegate.m */; };
 		CED2BDB824112DB900C37170 /* AuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDB724112DB900C37170 /* AuthViewController.m */; };
-		CED2BDBB24112DB900C37170 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED2BDB924112DB900C37170 /* Main.storyboard */; };
-		CED2BDBD24112DBD00C37170 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED2BDBC24112DBD00C37170 /* Assets.xcassets */; };
 		CED2BDC324112DBD00C37170 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDC224112DBD00C37170 /* main.m */; };
 		CED2BDCD24112DBD00C37170 /* InstaKillerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDCC24112DBD00C37170 /* InstaKillerTests.m */; };
 		CED2BDD824112DBD00C37170 /* InstaKillerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CED2BDD724112DBD00C37170 /* InstaKillerUITests.m */; };
@@ -48,17 +48,17 @@
 		8069CCEFDA80B8AA8C6C7E45 /* Pods-InstaKiller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKiller.release.xcconfig"; path = "Target Support Files/Pods-InstaKiller/Pods-InstaKiller.release.xcconfig"; sourceTree = "<group>"; };
 		8CA1EDA3DA89D3F8D6CBDA0F /* Pods-InstaKiller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKiller.debug.xcconfig"; path = "Target Support Files/Pods-InstaKiller/Pods-InstaKiller.debug.xcconfig"; sourceTree = "<group>"; };
 		9B5FA3686632B942B625D50D /* Pods-InstaKillerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKillerTests.release.xcconfig"; path = "Target Support Files/Pods-InstaKillerTests/Pods-InstaKillerTests.release.xcconfig"; sourceTree = "<group>"; };
-		CE4DDFA9241F668D005548CF /* CommonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
-		CE4DDFAA241F668D005548CF /* CommonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
 		CE4DDFAF241FB03A005548CF /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		CE4DDFB0241FB03A005548CF /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		CE8A7A6B243F11800025535B /* CommonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
+		CE8A7A6C243F11800025535B /* CommonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
+		CE8A7A6E243F13420025535B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		CE8A7A70243F17530025535B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED2BDAD24112DB900C37170 /* InstaKiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaKiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED2BDB024112DB900C37170 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CED2BDB124112DB900C37170 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CED2BDB624112DB900C37170 /* AuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthViewController.h; sourceTree = "<group>"; };
 		CED2BDB724112DB900C37170 /* AuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthViewController.m; sourceTree = "<group>"; };
-		CED2BDBA24112DB900C37170 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CED2BDBC24112DBD00C37170 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED2BDC124112DBD00C37170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CED2BDC224112DBD00C37170 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CED2BDC824112DBD00C37170 /* InstaKillerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaKillerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,23 +156,23 @@
 			isa = PBXGroup;
 			children = (
 				CEDDCDCD2436055500825733 /* data */,
-				CED2BDB024112DB900C37170 /* AppDelegate.h */,
-				CED2BDB124112DB900C37170 /* AppDelegate.m */,
+				CE8A7A70243F17530025535B /* Assets.xcassets */,
 				CEDDCDD42438B1FE00825733 /* PhotoCollectionViewController.h */,
 				CEDDCDD52438B1FE00825733 /* PhotoCollectionViewController.m */,
+				CE8A7A6E243F13420025535B /* Main.storyboard */,
 				CED2BDB624112DB900C37170 /* AuthViewController.h */,
 				CED2BDB724112DB900C37170 /* AuthViewController.m */,
-				CEDDCDCE24376AB400825733 /* SceneDelegate.h */,
-				CEDDCDCF24376AB400825733 /* SceneDelegate.m */,
-				CE4DDFA9241F668D005548CF /* CommonViewController.h */,
-				CE4DDFAA241F668D005548CF /* CommonViewController.m */,
+				CE8A7A6B243F11800025535B /* CommonViewController.h */,
+				CE8A7A6C243F11800025535B /* CommonViewController.m */,
 				CE4DDFAF241FB03A005548CF /* PhotoCollectionViewCell.h */,
 				CE4DDFB0241FB03A005548CF /* PhotoCollectionViewCell.m */,
-				CED2BDB924112DB900C37170 /* Main.storyboard */,
-				CED2BDBC24112DBD00C37170 /* Assets.xcassets */,
+				CED2BDB024112DB900C37170 /* AppDelegate.h */,
+				CED2BDB124112DB900C37170 /* AppDelegate.m */,
+				CEDDCDCE24376AB400825733 /* SceneDelegate.h */,
+				CEDDCDCF24376AB400825733 /* SceneDelegate.m */,
+				CEDDCDC72433843D00825733 /* UIImageView+RemoteFile.h */,
 				CED2BDC124112DBD00C37170 /* Info.plist */,
 				CED2BDC224112DBD00C37170 /* main.m */,
-				CEDDCDC72433843D00825733 /* UIImageView+RemoteFile.h */,
 			);
 			path = InstaKiller;
 			sourceTree = "<group>";
@@ -312,8 +312,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED2BDBD24112DBD00C37170 /* Assets.xcassets in Resources */,
-				CED2BDBB24112DB900C37170 /* Main.storyboard in Resources */,
+				CE8A7A71243F17530025535B /* Assets.xcassets in Resources */,
+				CE8A7A6F243F13430025535B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,12 +442,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDDCDCC2435F2A000825733 /* VKModel.m in Sources */,
+				CE8A7A6D243F11800025535B /* CommonViewController.m in Sources */,
 				CE4DDFB1241FB03A005548CF /* PhotoCollectionViewCell.m in Sources */,
 				CED2BDB824112DB900C37170 /* AuthViewController.m in Sources */,
 				CEDDCDD024376AB500825733 /* SceneDelegate.m in Sources */,
 				CED2BDB224112DB900C37170 /* AppDelegate.m in Sources */,
 				CED2BDC324112DBD00C37170 /* main.m in Sources */,
-				CE4DDFAB241F668D005548CF /* CommonViewController.m in Sources */,
 				CEDDCDD62438B1FE00825733 /* PhotoCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,17 +482,6 @@
 			targetProxy = CED2BDD424112DBD00C37170 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		CED2BDB924112DB900C37170 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CED2BDBA24112DB900C37170 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CED2BDDA24112DBD00C37170 /* Debug */ = {

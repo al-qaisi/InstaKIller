@@ -9,8 +9,6 @@
 #import "VKModel.h"
 #import <VKSdk.h>
 
-//TODO: add download placeholder photo to assets
-//TODO: add button on common view to show photos
 
 @implementation VKModel
 

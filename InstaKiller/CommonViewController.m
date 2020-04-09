@@ -2,31 +2,33 @@
 //  CommonViewController.m
 //  InstaKiller
 //
-//  Created by user on 16.03.2020.
+//  Created by user on 09.04.2020.
 //  Copyright © 2020 temp. All rights reserved.
 //
 
 #import "CommonViewController.h"
-#import "VKSdk.h"
+
+@interface CommonViewController ()
+
+@end
 
 @implementation CommonViewController
 
-/**
- * Method name: onPressLoginButton
- * Description: fires when login button is clicked. initializes authorization process
- * Params: sender
-*/
-- (IBAction)onShowPhotosTouch:(id)sender {
-    UIViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PhotoCollectionViewController"];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-
 - (void)viewDidLoad {
-    [super viewDidLoad];
+  
     // Do any additional setup after loading the view.
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    NSLog(@"Common View did appear");
+}
+
+- (IBAction)onShowPhotosTouch:(id)sender {
+    [super viewDidLoad];
+         UIViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PhotoCollectionViewController"];
+
+         [self.navigationController pushViewController:vc animated:YES];
+}
 
 /*
 #pragma mark - Navigation

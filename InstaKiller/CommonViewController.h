@@ -2,16 +2,16 @@
 //  CommonViewController.h
 //  InstaKiller
 //
-//  Created by user on 16.03.2020.
+//  Created by user on 09.04.2020.
 //  Copyright © 2020 temp. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-/**
- * Class name: CommonViewController
- * Description: controller where is presented all functionality of the application
- */
+NS_ASSUME_NONNULL_BEGIN
+
 @interface CommonViewController : UIViewController
 
 @end
+
+NS_ASSUME_NONNULL_END

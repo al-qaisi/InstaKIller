@@ -28,7 +28,7 @@
  * Params: vkPhoto
 */
 - (void)setImageWithURL:(VKPhoto *)vkPhoto {
-    [vkImage setImageWithRemoteFileURL: vkPhoto.photo_130 placeholderImage: [UIImage imageNamed:@"me"]];
+    [vkImage setImageWithRemoteFileURL: vkPhoto.photo_130 placeholderImage: [UIImage imageNamed:@"photos_refresh"]];
 }
 
 //TODO: add method for initializing big format image view on click
