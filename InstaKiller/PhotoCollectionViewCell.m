@@ -8,11 +8,12 @@
 
 #import "PhotoCollectionViewCell.h"
 #import "UIImageView+RemoteFile.h"
+#import "UIImageViewExtended.h"
 
 @interface PhotoCollectionViewCell() {
     /**
     * IVar name: vkImage
-    * Description: cell's UIImageView content
+    * Description: cell's UIIm  ageView content
     * Parameters: vkImage
     */
     __weak IBOutlet UIImageView *vkImage;

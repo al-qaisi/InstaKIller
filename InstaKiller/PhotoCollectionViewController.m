@@ -6,10 +6,11 @@
 //  Copyright © 2020 temp. All rights reserved.
 //
 
+#import <VKSdk.h>
+#import "VKModel.h"
 #import "PhotoCollectionViewController.h"
 #import "PhotoCollectionViewCell.h"
-#import "VKModel.h"
-#import "VKSdk.h"
+#import "FullPhotoViewController.h"
 
 @interface PhotoCollectionViewController () {
     VKModel* vkModel;
@@ -75,6 +76,14 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    VKPhoto *vkPhoto = photos[indexPath.row];
+    FullPhotoViewController *fullPhotoVC = [self.storyboard instantiateViewControllerWithIdentifier:@"FullPhotoViewController"];
+    fullPhotoVC.vkPhoto = vkPhoto;
+    [self.navigationController pushViewController:fullPhotoVC animated:YES];
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
