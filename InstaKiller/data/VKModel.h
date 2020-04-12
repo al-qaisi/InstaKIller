@@ -42,4 +42,11 @@
 */
 - (NSArray<VKPhoto*> *)requestPhotos;
 
+/**
+ * Method name: requestPhotos
+ * Description: fetches and returns info about owner's user profile
+ * Parameters: none
+*/
+- (NSArray<VKPhoto*> *)requestOwnerInfo;
+
 @end

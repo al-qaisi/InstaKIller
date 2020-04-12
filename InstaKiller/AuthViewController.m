@@ -6,9 +6,11 @@
 //  Copyright © 2020 temp. All rights reserved.
 //
 
-#import "AuthViewController.h"
+
 #import <VKSdk.h>
 #import "VKModel.h"
+#import "AuthViewController.h"
+#import "CommonViewController.h"
 
 @interface AuthViewController () <VKSdkDelegate, VKSdkUIDelegate> {
     VKModel *vkModel;
@@ -56,12 +58,28 @@
  * Params: result
 */
 - (void)vkSdkAccessAuthorizationFinishedWithResult:(VKAuthorizationResult *)result {
-    if (result.token) {
-        NSLog(@"Authorization successful. Token: %@", result.token);
-        
-        UIViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"CommonViewController"];
+    
+}
 
-        [self.navigationController pushViewController:vc animated:YES];
+/**
+ * Description: allows to get userinfo after successful authorization
+ * Params: result
+*/
+- (void)vkSdkAuthorizationStateUpdatedWithResult:(VKAuthorizationResult *)result {
+   if (result.token) {
+        NSLog(@"Authorization successful. Token: %@", result.token);
+        NSLog(@"User: %@", result.user);
+        
+        NSLog(@"UserInfo: ");
+        NSArray<NSString*> *keys = [NSArray arrayWithObjects:@"first_name", @"last_name", @"city", @"bdate", nil];
+        NSDictionary *dictProp = [result.user dictionaryWithValuesForKeys:keys];
+        for(NSString *key in dictProp) {
+            NSLog(@"%@ : %@", key, dictProp[key]);
+        }
+        
+        CommonViewController * commonVC = [self.storyboard instantiateViewControllerWithIdentifier:@"CommonViewController"];
+        commonVC.userInfo = result.user;
+        [self.navigationController pushViewController:commonVC animated:YES];
     } else if (result.error) {
         NSLog(@"Authorization error. description: %@", result.error);
     }

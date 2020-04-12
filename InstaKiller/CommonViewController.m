@@ -7,27 +7,61 @@
 //
 
 #import "CommonViewController.h"
-
-@interface CommonViewController ()
-
-@end
+#import "UIImageViewExtended.h"
 
 @implementation CommonViewController
 
+@synthesize userInfo;
+@synthesize profilePhoto;
+@synthesize fullNameLabel;
+@synthesize cityLabel;
+@synthesize birthDateLabel;
+@synthesize tableView;
+
 - (void)viewDidLoad {
-  
-    // Do any additional setup after loading the view.
+    //populate userinfo fields - name, sur, city
+    //download profile image
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    NSLog(@"Common View did appear");
+    NSString *fullName = [NSString stringWithFormat: @"%@ %@", userInfo.first_name, userInfo.last_name];
+    fullNameLabel.text = fullName;
+    
+    cityLabel.text = (NSString *)userInfo.city; // nullable city
+    birthDateLabel.text = userInfo.bdate;
+    
+    [profilePhoto setImageWithRemoteFileURL:userInfo.photo_200 placeholderImage:[UIImage imageNamed: @"default_profile_photo_200"]];
+}
+
+- (IBAction)onShowFriendsTouch:(id)sender {
+}
+
+- (IBAction)onShowGruopsTouch:(id)sender {
 }
 
 - (IBAction)onShowPhotosTouch:(id)sender {
     [super viewDidLoad];
-         UIViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PhotoCollectionViewController"];
+    UIViewController * vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PhotoCollectionViewController"];
 
-         [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 100;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    return cell;
+}
+
+#pragma mark UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /*

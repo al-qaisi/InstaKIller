@@ -47,7 +47,7 @@ static VKModel* _sharedInstance = nil;
 }
 
 //TODO: make method for getting userinfo
-- (void)requestUserInfo {
+- (void)requestOwnerInfo {
         
 }
 

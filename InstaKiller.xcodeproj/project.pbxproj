@@ -74,8 +74,6 @@
 		CEDB9D8F243F2C5F00F727C2 /* TestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHeader.h; sourceTree = "<group>"; };
 		CEDB9D90243F2DD300F727C2 /* UIImageViewExtended.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImageViewExtended.h; sourceTree = "<group>"; };
 		CEDB9D91243F2DD300F727C2 /* UIImageViewExtended.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageViewExtended.m; sourceTree = "<group>"; };
-		CEDB9D93243F2EC300F727C2 /* UIImageView+RemoteFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+RemoteFile.h"; sourceTree = "<group>"; };
-		CEDB9D94243F2EC300F727C2 /* RemoteFileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteFileUtility.h; sourceTree = "<group>"; };
 		CEDDCDCA2435F2A000825733 /* VKModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKModel.h; sourceTree = "<group>"; };
 		CEDDCDCB2435F2A000825733 /* VKModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VKModel.m; sourceTree = "<group>"; };
 		CEDDCDCE24376AB400825733 /* SceneDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -166,14 +164,12 @@
 				CEDDCDCD2436055500825733 /* data */,
 				CE8A7A70243F17530025535B /* Assets.xcassets */,
 				CE8A7A6E243F13420025535B /* Main.storyboard */,
-				CE8A7A6B243F11800025535B /* CommonViewController.h */,
 				CED2BDB624112DB900C37170 /* AuthViewController.h */,
 				CED2BDB724112DB900C37170 /* AuthViewController.m */,
+				CE8A7A6B243F11800025535B /* CommonViewController.h */,
 				CE8A7A6C243F11800025535B /* CommonViewController.m */,
 				CEDDCDD42438B1FE00825733 /* PhotoCollectionViewController.h */,
 				CEDDCDD52438B1FE00825733 /* PhotoCollectionViewController.m */,
-				CEDB9D94243F2EC300F727C2 /* RemoteFileUtility.h */,
-				CEDB9D93243F2EC300F727C2 /* UIImageView+RemoteFile.h */,
 				CE4DDFAF241FB03A005548CF /* PhotoCollectionViewCell.h */,
 				CE4DDFB0241FB03A005548CF /* PhotoCollectionViewCell.m */,
 				CE8A7A72243F1C9A0025535B /* FullPhotoViewController.h */,

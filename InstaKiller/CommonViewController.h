@@ -7,11 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <VKSdk.h>
 
-NS_ASSUME_NONNULL_BEGIN
+@interface CommonViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@interface CommonViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *profilePhoto;
+@property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *birthDateLabel;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, atomic) NSMutableArray *posts;
+
+
+@property (weak) VKUser *userInfo;
 
 @end
-
-NS_ASSUME_NONNULL_END
