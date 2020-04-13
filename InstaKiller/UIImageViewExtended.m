@@ -6,7 +6,7 @@
 //  Copyright © 2020 temp. All rights reserved.
 //
 
-#import "UIImageViewExtended.h"
+
 
 //
 //  RemoteFile.h
@@ -18,7 +18,8 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <objc/runtime.h>
-#import "RemoteFileUtility.h"
+
+#import "UIImageViewExtended.h"
 
 @implementation ImageCache
 
@@ -62,7 +63,6 @@
  */
 - (NSMutableDictionary *) cache
 {
-    NSLog(@"ds");
     if(_cache == nil) {
         _cache = [NSMutableDictionary dictionary];
     }

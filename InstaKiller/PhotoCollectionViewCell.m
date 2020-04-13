@@ -7,7 +7,6 @@
 //
 
 #import "PhotoCollectionViewCell.h"
-#import "UIImageView+RemoteFile.h"
 #import "UIImageViewExtended.h"
 
 @interface PhotoCollectionViewCell() {
@@ -32,8 +31,7 @@
     [vkImage setImageWithRemoteFileURL: vkPhoto.photo_130 placeholderImage: [UIImage imageNamed:@"photos_refresh"]];
 }
 
-//TODO: add method for initializing big format image view on click
-//TODO: add view to show full image format (with caching)
+
 - (void)requestUserInfo {
 
 }

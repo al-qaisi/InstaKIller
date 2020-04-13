@@ -47,8 +47,8 @@ static VKModel* _sharedInstance = nil;
 }
 
 //TODO: make method for getting userinfo
-- (void)requestOwnerInfo {
-        
+- (void)requestWall {
+     NSLog(@"trying to request wall...");
 }
 
 

@@ -10,6 +10,7 @@
 		2833259EF09224019A7CE03F /* Pods_InstaKiller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E51A1B6F3D319616A9ACE4 /* Pods_InstaKiller.framework */; };
 		97E001A5EDFE9E8669457693 /* Pods_InstaKillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE83657F73F9111E7B823FF /* Pods_InstaKillerTests.framework */; };
 		CE4DDFB1241FB03A005548CF /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DDFB0241FB03A005548CF /* PhotoCollectionViewCell.m */; };
+		CE5F5184244328FD001FED39 /* WallTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5F5183244328FD001FED39 /* WallTableViewCell.m */; };
 		CE8A7A6D243F11800025535B /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8A7A6C243F11800025535B /* CommonViewController.m */; };
 		CE8A7A6F243F13430025535B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A7A6E243F13420025535B /* Main.storyboard */; };
 		CE8A7A71243F17530025535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A7A70243F17530025535B /* Assets.xcassets */; };
@@ -52,6 +53,8 @@
 		9B5FA3686632B942B625D50D /* Pods-InstaKillerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKillerTests.release.xcconfig"; path = "Target Support Files/Pods-InstaKillerTests/Pods-InstaKillerTests.release.xcconfig"; sourceTree = "<group>"; };
 		CE4DDFAF241FB03A005548CF /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		CE4DDFB0241FB03A005548CF /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		CE5F5182244328FD001FED39 /* WallTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WallTableViewCell.h; sourceTree = "<group>"; };
+		CE5F5183244328FD001FED39 /* WallTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WallTableViewCell.m; sourceTree = "<group>"; };
 		CE8A7A6B243F11800025535B /* CommonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
 		CE8A7A6C243F11800025535B /* CommonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
 		CE8A7A6E243F13420025535B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -168,6 +171,8 @@
 				CED2BDB724112DB900C37170 /* AuthViewController.m */,
 				CE8A7A6B243F11800025535B /* CommonViewController.h */,
 				CE8A7A6C243F11800025535B /* CommonViewController.m */,
+				CE5F5182244328FD001FED39 /* WallTableViewCell.h */,
+				CE5F5183244328FD001FED39 /* WallTableViewCell.m */,
 				CEDDCDD42438B1FE00825733 /* PhotoCollectionViewController.h */,
 				CEDDCDD52438B1FE00825733 /* PhotoCollectionViewController.m */,
 				CE4DDFAF241FB03A005548CF /* PhotoCollectionViewCell.h */,
@@ -456,6 +461,7 @@
 				CE4DDFB1241FB03A005548CF /* PhotoCollectionViewCell.m in Sources */,
 				CED2BDB824112DB900C37170 /* AuthViewController.m in Sources */,
 				CEDDCDD024376AB500825733 /* SceneDelegate.m in Sources */,
+				CE5F5184244328FD001FED39 /* WallTableViewCell.m in Sources */,
 				CEDB9D92243F2DD300F727C2 /* UIImageViewExtended.m in Sources */,
 				CED2BDB224112DB900C37170 /* AppDelegate.m in Sources */,
 				CE8A7A74243F1C9A0025535B /* FullPhotoViewController.m in Sources */,

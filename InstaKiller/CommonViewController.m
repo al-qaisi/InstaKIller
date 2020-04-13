@@ -8,6 +8,7 @@
 
 #import "CommonViewController.h"
 #import "UIImageViewExtended.h"
+#import "WallTableViewCell.h"
 
 @implementation CommonViewController
 
@@ -18,9 +19,10 @@
 @synthesize birthDateLabel;
 @synthesize tableView;
 
+@synthesize posts;
+
 - (void)viewDidLoad {
-    //populate userinfo fields - name, sur, city
-    //download profile image
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -49,11 +51,13 @@
 #pragma mark UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 44.0;
+    WallTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     return cell;
 }
 
