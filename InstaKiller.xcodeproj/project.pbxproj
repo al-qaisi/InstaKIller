@@ -11,6 +11,7 @@
 		97E001A5EDFE9E8669457693 /* Pods_InstaKillerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EE83657F73F9111E7B823FF /* Pods_InstaKillerTests.framework */; };
 		CE4DDFB1241FB03A005548CF /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4DDFB0241FB03A005548CF /* PhotoCollectionViewCell.m */; };
 		CE5F5184244328FD001FED39 /* WallTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5F5183244328FD001FED39 /* WallTableViewCell.m */; };
+		CE5F5188244469B8001FED39 /* DownloadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5F5187244469B8001FED39 /* DownloadHelper.m */; };
 		CE8A7A6D243F11800025535B /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8A7A6C243F11800025535B /* CommonViewController.m */; };
 		CE8A7A6F243F13430025535B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8A7A6E243F13420025535B /* Main.storyboard */; };
 		CE8A7A71243F17530025535B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8A7A70243F17530025535B /* Assets.xcassets */; };
@@ -55,6 +56,8 @@
 		CE4DDFB0241FB03A005548CF /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		CE5F5182244328FD001FED39 /* WallTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WallTableViewCell.h; sourceTree = "<group>"; };
 		CE5F5183244328FD001FED39 /* WallTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WallTableViewCell.m; sourceTree = "<group>"; };
+		CE5F5186244469B8001FED39 /* DownloadHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadHelper.h; sourceTree = "<group>"; };
+		CE5F5187244469B8001FED39 /* DownloadHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadHelper.m; sourceTree = "<group>"; };
 		CE8A7A6B243F11800025535B /* CommonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonViewController.h; sourceTree = "<group>"; };
 		CE8A7A6C243F11800025535B /* CommonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonViewController.m; sourceTree = "<group>"; };
 		CE8A7A6E243F13420025535B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -74,7 +77,6 @@
 		CED2BDD324112DBD00C37170 /* InstaKillerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstaKillerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED2BDD724112DBD00C37170 /* InstaKillerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstaKillerUITests.m; sourceTree = "<group>"; };
 		CED2BDD924112DBD00C37170 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEDB9D8F243F2C5F00F727C2 /* TestHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestHeader.h; sourceTree = "<group>"; };
 		CEDB9D90243F2DD300F727C2 /* UIImageViewExtended.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIImageViewExtended.h; sourceTree = "<group>"; };
 		CEDB9D91243F2DD300F727C2 /* UIImageViewExtended.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIImageViewExtended.m; sourceTree = "<group>"; };
 		CEDDCDCA2435F2A000825733 /* VKModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VKModel.h; sourceTree = "<group>"; };
@@ -185,9 +187,10 @@
 				CEDDCDCF24376AB400825733 /* SceneDelegate.m */,
 				CED2BDC124112DBD00C37170 /* Info.plist */,
 				CED2BDC224112DBD00C37170 /* main.m */,
-				CEDB9D8F243F2C5F00F727C2 /* TestHeader.h */,
 				CEDB9D90243F2DD300F727C2 /* UIImageViewExtended.h */,
 				CEDB9D91243F2DD300F727C2 /* UIImageViewExtended.m */,
+				CE5F5186244469B8001FED39 /* DownloadHelper.h */,
+				CE5F5187244469B8001FED39 /* DownloadHelper.m */,
 			);
 			path = InstaKiller;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				CE8A7A74243F1C9A0025535B /* FullPhotoViewController.m in Sources */,
 				CED2BDC324112DBD00C37170 /* main.m in Sources */,
 				CEDDCDD62438B1FE00825733 /* PhotoCollectionViewController.m in Sources */,
+				CE5F5188244469B8001FED39 /* DownloadHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

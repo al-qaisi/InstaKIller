@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <VKSdk.h>
+#import "DownloadHelper.h"
 
-@interface CommonViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface CommonViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, DownloadHelperDelegateCommon>
 
 @property (weak, nonatomic) IBOutlet UIImageView *profilePhoto;
 @property (weak, nonatomic) IBOutlet UILabel *fullNameLabel;
@@ -17,9 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *birthDateLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, atomic) NSMutableArray *posts;
-
-
+@property (strong, atomic) NSArray *posts;
 @property (weak) VKUser *userInfo;
 
 @end

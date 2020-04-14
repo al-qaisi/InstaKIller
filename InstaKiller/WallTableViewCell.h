@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DownloadHelper.h"
+#import "UIImageViewExtended.h"
 
-
-@interface WallTableViewCell : UITableViewCell
+@interface WallTableViewCell : UITableViewCell <DownloadHelperDelegateCommon>
 
 @property (weak, nonatomic) IBOutlet UILabel *authorName;
 @property (weak, nonatomic) IBOutlet UILabel *creationDate;
 @property (weak, nonatomic) IBOutlet UIImageView *postImage;
 @property (weak, nonatomic) IBOutlet UITextView *postText;
+@property (nonatomic, strong) NSDictionary *postData;
+@property (nonatomic, strong, setter = setDownloadHelper:) DownloadHelper* downloadHelper;
+
+- (void)setPostData:(NSDictionary*) postData;
 
 @end

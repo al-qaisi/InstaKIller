@@ -8,21 +8,21 @@
 
 #import "VKModel.h"
 #import <VKSdk.h>
-
+#import "DownloadHelper.h"
 
 @implementation VKModel
 
 static int PHOTOS_COUNT = 200;
-static VKModel* _sharedInstance = nil;
+static VKModel* sharedInstance = nil;
 
 
 + (VKModel*) sharedInstance {
     
-    if(!_sharedInstance) {
-        _sharedInstance = [[VKModel alloc] init];
+    if(!sharedInstance) {
+        sharedInstance = [[VKModel alloc] init];
     }
     
-    return _sharedInstance;
+    return sharedInstance;
 }
 
 
@@ -47,8 +47,39 @@ static VKModel* _sharedInstance = nil;
 }
 
 //TODO: make method for getting userinfo
-- (void)requestWall {
-     NSLog(@"trying to request wall...");
+- (void)requestWallPosts:(id<DownloadHelperDelegateCommon>)delegate {
+    NSLog(@"trying to request wall...");
+    VKRequest *getWallRequest = [VKRequest requestWithMethod:@"wall.get" andParameters:@{@"owner_id":@37845064}];
+    
+    getWallRequest.waitUntilDone = YES;
+    
+    [getWallRequest executeWithResultBlock: ^(VKResponse *response) {
+        [delegate didCompleteDownloadForURL:response.json[@"items"]];
+        } errorBlock:^(NSError * error) {
+        if (error.code != VK_API_ERROR) {
+            [error.vkError.request repeat];
+        } else {
+            NSLog(@"VK error: %@", error);
+        }
+    }];
+}
+
+- (void)requestUsersInfo:(id<DownloadHelperDelegateCommon>)delegate withOwnerId:(NSNumber *) owner_id {
+    NSLog(@"Inrequest users meth AAAAA");
+    VKRequest *getUserInfoRequest = [VKRequest requestWithMethod:@"users.get" andParameters:@{@"user_ids":owner_id}];
+
+    getUserInfoRequest.waitUntilDone = YES;
+
+    [getUserInfoRequest executeWithResultBlock: ^(VKResponse *response) {
+        NSLog(@"returned response ith uinfo");
+        [delegate didCompleteDownloadForURL: [[NSArray alloc] initWithObjects: response.json, nil]];
+        } errorBlock:^(NSError * error) {
+        if (error.code != VK_API_ERROR) {
+            [error.vkError.request repeat];
+        } else {
+            NSLog(@"VK error: %@", error);
+        }
+    }];
 }
 
 

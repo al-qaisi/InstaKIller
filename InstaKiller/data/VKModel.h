@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <VKSdk.h>
-
+#import "DownloadHelper.h"
 /**
  * Class name: sharedInstance
  * Description: represents data source for application view controllers
@@ -26,7 +26,7 @@
  * Description: returns singletone of VKModel instance
  * Parameters: none
 */
-+ (VKModel*) sharedInstance;
++ (VKModel*)sharedInstance;
 
 /**
  * Method name: authenticateWithVKWithDelegate
@@ -47,6 +47,13 @@
  * Description: fetches and returns info about owner's wall
  * Parameters: none
 */
-- (void)requestWall;
+- (void)requestWallPosts:(id<DownloadHelperDelegateCommon>)delegate;
+
+/**
+ * Method name: requestUsersInfo
+ * Description: returns users info by  their ids
+ * Parameters: none
+*/
+- (void)requestUsersInfo:(id<DownloadHelperDelegateCommon>)delegate withOwnerId:(NSNumber *) owner_id;
 
 @end

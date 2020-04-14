@@ -87,34 +87,6 @@
 @end
 
 
-@implementation DownloadHelper
-
-@synthesize url = _url;
-@synthesize data = _data;
-@synthesize connection = _connection;
-@synthesize delegate = _delegate;
-
-- (void)connection: (NSURLConnection*) connection didReceiveData: (NSData*) data {
-    [self.data appendData:data];
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    [self.delegate didCompleteDownloadForURL:self.url withData:self.data];
-}
-
-- (void) cancelConnection {
-    if(self.connection) {
-        [self.connection cancel];
-        [self setConnection:nil];
-    }
-}
-
--(void) dealloc {
-    [self cancelConnection];
-}
-@end
-
-
 @implementation UIImageView(RemoteFileHidden)
 
 /**
@@ -159,7 +131,7 @@ static char kImageDownloadHelperObjectKey;
         
     }
     
-        return helper;
+    return helper;
 }
 
 - (void)setDownloadHelper:(DownloadHelper *)downloadHelper {
@@ -193,7 +165,6 @@ OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 @end
 
 
-
 @implementation UIImageView (RemoteFile)
 
 - (void)setImageWithRemoteFileURL:(NSString *) urlString placeholderImage: (UIImage *)placeholderImage {
@@ -204,6 +175,7 @@ OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         
     [self.downloadHelper cancelConnection];
     self.url = urlString;
+    
     //get a reference to the image cache singleton
     ImageCache *imageCache = [UIImageView imageCache];
     UIImage *image = [imageCache cachedImageForURL:urlString]; //check it we've already got a cached version of the image
@@ -219,8 +191,8 @@ OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
     self.downloadHelper.url = urlString;
-    //set the download helper as the delegate of the data download updates
     
+    //set the download helper as the delegate of the data download updates
     self.downloadHelper.connection = (NSURLConnection *)[[NSURLConnection alloc] initWithRequest:request delegate:self.downloadHelper startImmediately:YES];
     if (self.downloadHelper.connection) {
     //create an empty mutable data container to add the data bytes to
